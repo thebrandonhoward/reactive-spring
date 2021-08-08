@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import reactor.blockhound.BlockHound;
 import reactor.core.publisher.Flux;
 
 import java.time.Duration;
@@ -18,6 +19,7 @@ import java.util.stream.Stream;
 public class ReactiveSpringApplication {
 
     public static void main(String[] args) {
+        BlockHound.install();
         SpringApplication.run(ReactiveSpringApplication.class, args);
     }
 
